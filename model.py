@@ -19,7 +19,6 @@ class Block(nn.Module):
 
     def forward(self, x, k_ = None, v_ = None):
         B, T, C = x.size()
-        print(B, T, C)
         q = self.q(x)
         k = self.k(x)
         v = self.v(x)
